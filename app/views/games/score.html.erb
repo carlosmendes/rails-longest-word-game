@@ -1,0 +1,23 @@
+<h1>Games#score</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+
+
+<div class="wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<div class="results text-center">
+					<div><p>Score: </p><%= @results[:score].round %></div>
+					<div><p>Time: </p><%= @results[:time].round %></div>
+					<div><p>Translation: </p><%= @results[:translation] %></div>
+					<div><p>Message: </p><%= @results[:message] %></div>
+					<div><p>High Score: </p><%= session[:high_scores].sort.reverse %></div>
+					<div><strong>Session: </strong><%= session[:count_games] %></div>
+					<%= link_to 'Play again', root_path %>
+				</div>
+				
+			</div> 
+			
+		</div>	
+	</div>
+</div>

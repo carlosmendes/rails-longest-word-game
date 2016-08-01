@@ -1,0 +1,9 @@
+<h1>This is the letters that you can use</h1>
+<p><%= @grid.join(' ') %></p>
+
+<form action="/score" method="get">
+	<input type="text" name="attempt" placeholder="what is your attempt?">
+	<input type="hidden" name="timer_start" value="<%= @start_timer %>">
+	<input type="hidden" name="grid_variable" value="<%= @grid.join %>">
+	<input type="submit">
+</form>
